@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BUOI 2</title>
+
+        <script>
+             function shortclock(){
+                 let d=new Date();
+
+                 return `${d.getDate()};${d.getMonth()};${d.getFullYear()};
+                        ${d.getHours()};${d.getMinutes()};${d.getSeconds()}}`;
+
+            }
+
+function addcolor(){
+    let color=document.getElementById("colorId").value;
+    let area=document.getElementById("")
+    area.innerHTML +=`<input> type = 'button' style="background color":`
+}
+function hideShape(){
+    let shape = document.querySelectorAll(".shapeSvg > div")
+    shape.forEach( v => v.style.display = "none")
+}
+function showShape(obj){
+    hideShape();
+    document.querySelector(`.shapeSvg>div:nth-child( ${obj.hideShape}`)
+}
+
+function init(){
+    let shape= document.querySelectorAll(".shapeSvg > div")
+    shape.forEach(value =>{
+        value.style.display = "none";
+    }
+    );
+    setInterval(function()  { 
+        
+    
+    let clock = document.getElementById("clock");
+    clock.innerText = showLock();
+     },1000);
+}
+        </script>
+        <style>
+                
+        </style>
+
+    </head>
+    <body>
+        <div onload="init()">
+            <span id="clock">00:00:00:00:00:00</span>
+        </div>
+        <div>
+            <input type="radio" name="shape" rel="1" onclick="showShape"check >Circle
+        </div>
+        <div>
+            <input type="input" placeholder="Input color...">
+            <input type="botton" value='addcolor' onclick="addcolor">
+        </div id>
+        <div>
+            <svg width="100" height="100">
+                <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+            </svg>
+              
+        </div>
+        <div>
+            <svg width="400" height="180">
+                <rect x="50" y="20" rx="20" ry="20" width="150" height="150"
+                style="fill:red;stroke:black;stroke-width:5;opacity:0.5" />
+              </svg>
+        </div>
+        
+        <div>
+
+        </div>
+    </body>
+</html>
